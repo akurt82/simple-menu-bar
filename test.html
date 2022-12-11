@@ -1,0 +1,70 @@
+﻿<!doctype html>
+
+<html>
+	<head>
+		<title>Test</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type = "text/javascript">
+			function moveAboveMe ( obj )
+			{
+				$(".desitm").animate({
+					"margin-left": $(obj).offset().left - 9, 
+					"width":$(obj).width() + 23, easing: 'easeOutBounce' }, 150);
+			}
+		</script>
+		<style type = "text/css">
+			.desbox
+			{
+				height: 44px;
+				width: 600px;
+				background-color: rgb(230,230,241);
+			}
+			.desitm
+			{
+				position: absolute;
+				margin-top: 1px;
+				height: 42px;
+				width: 1px;
+				background-color: rgb(252,248,241);
+				border-radius: 12px;
+			}
+			.design
+			{
+				position: absolute;
+				margin-left: 1px;
+			}
+			.design td
+			{
+				padding: 10px;
+				height: 24px;
+				vertical-align: middle;
+				margin: 0;
+				cursor: pointer;
+			}
+			.design td:hover
+			{
+				easing: easeOutBounce;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class = "desbox">
+
+			<div class = "desitm">&nbsp;</div>
+
+			<table border = "0" cellspacing = "0" cellpadding = "0" class = "design">
+			<tr>
+				<td onmouseover = "javascript:moveAboveMe(this);">Deutsch</td>
+				<td onmouseover = "javascript:moveAboveMe(this);">Englisch</td>
+				<td onmouseover = "javascript:moveAboveMe(this);">Türkisch</td>
+				<td onmouseover = "javascript:moveAboveMe(this);">Französisch</td>
+				<td onmouseover = "javascript:moveAboveMe(this);">Spanisch</td>
+				<td onmouseover = "javascript:moveAboveMe(this);">Irisch</td>
+			</tr>
+			</table>
+
+		</div>
+
+	</body>
+</html>
